@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educator Interview Assistant</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Educator Interview Assistant</h1>
+
+    <!-- Form for Educator Input -->
+    <form action="/generate" method="POST">
+      <label for="time">How much time do you have for this activity?</label>
+      <input type="text" id="time" name="time" required />
+
+      <label for="grades">What grade(s) or age group(s) are your learners?</label>
+      <input type="text" id="grades" name="grades" required />
+
+      <label for="environment">What is the learning environment?</label>
+      <input type="text" id="environment" name="environment" required />
+
+      <label for="confidence">How confident are you in using hands-on projects?</label>
+      <input type="text" id="confidence" name="confidence" required />
+
+      <label for="assessment">Do you want to include an assessment?</label>
+      <select id="assessment" name="assessment" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <button type="submit">Generate</button>
+    </form>
+
+    <!-- Display Results if Educator Data Exists -->
+    <% if (educatorData) { %>
+      <hr />
+      <h2>Educator Input</h2>
+      <p><strong>Time:</strong> <%= educatorData.time %></p>
+      <p><strong>Grades:</strong> <%= educatorData.grades %></p>
+      <p><strong>Environment:</strong> <%= educatorData.environment %></p>
+      <p><strong>Confidence:</strong> <%= educatorData.confidence %></p>
+      <p><strong>Include Assessment:</strong> <%= educatorData.assessment %></p>
+
+      <h3>AI-Generated Lesson Plan & Assessment:</h3>
+      <!-- AI Response Container -->
+      <div class="ai-response">
+        <%= aiResponse %>
+      </div>
+    <% } else { %>
+      <hr />
+      <p>Submit the form above to generate a lesson plan and assessment!</p>
+    <% } %>
+  </div>
+</body>
+</html>
+

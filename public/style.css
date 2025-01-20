@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+/* Body Styling */
+body {
+  font-family: "Comic Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form Styling */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 3px dashed #ffa500;
+}
+
+form:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+form label::before {
+  content: "🌟";
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Input and Select Styling */
+form input, form select, form textarea {
+  width: 100%;
+  max-width: 100%; /* Prevent boxes from overflowing */
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Include padding and borders in the width calculation */
+  overflow: auto; /* Enable scrollbars for content overflow */
+}
+
+/* Textarea Specific Styling */
+form textarea {
+  min-height: 60px; /* Minimum height */
+  max-height: 200px; /* Maximum height for scrolling */
+  resize: vertical; /* Allow users to resize height only */
+}
+
+/* Focus Styling for Inputs and Textareas */
+form input:focus, form select:focus, form textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Button Styling */
+form button {
+  background: linear-gradient(135deg, #ff9a9e, #ff6a88);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #ff6a88, #ff9a9e);
+  transform: translateY(-2px);
+}
+
+/* AI Response Styling */
+.ai-response {
+  max-width: 100%;
+  min-height: 120px;
+  padding: 20px;
+  border: 2px solid #ffa500;
+  border-radius: 20px;
+  background: #fef9e7;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #ff6a88;
+  text-shadow: 2px 2px #ffa500;
+}
+
